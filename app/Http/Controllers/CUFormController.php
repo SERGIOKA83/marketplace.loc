@@ -16,10 +16,11 @@ class CUFormController extends Controller
 
     public function updateForm($id){
 
-       Session::put('idshop',$id);
+      // Session::put('idshop',$id);
 
-///dd($value);
+//dd($id);
 
-        return view('uform');
+
+        return view('uform',array('id'=>$id));
     }
 }

@@ -51,22 +51,22 @@ class AccountShopsController extends Controller
         return redirect('/account/shops');
     }
 
-    public function update(Request $request)
+    public function update($id, Request $request)
     {
 
 
-          $idshop = Session::pull('idshop', 'default');
-        //  dd($idshop);
+         // $idshop = Session::pull('idshop', 'default');
+        // dd($id);
 //dd($request);
 
         $data = $request->except('_token','save');
-        $shop = Shop::find($idshop);
+        $shop = Shop::find($id);
         //dd($data);
         $shop->name = $data['name'];
         $shop->description = $data['description'];
         $shop->save();
 
-        return;// redirect('/account/shops');
+        return redirect('/account/shops');
     ///    dd($data);
     }
 

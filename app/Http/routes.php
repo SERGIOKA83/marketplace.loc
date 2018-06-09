@@ -26,7 +26,7 @@ Route::group(['prefix'=>'account','middleware'=> ['web','auth']], function(){
 
      Route::get('/shops', 'AccountShopsController@show');
      Route::get('/shops/delete/{id}', 'AccountShopsController@delete');
-     Route::post('/shops/update', 'AccountShopsController@update');
+     Route::post('/shops/update/{id}', 'AccountShopsController@update')->name('shops.update');
      Route::post('/shops/create', 'AccountShopsController@create');
      Route::get('/shops/create/cform', ['uses'=>'CUFormController@createForm','as'=>'sccf']);
 

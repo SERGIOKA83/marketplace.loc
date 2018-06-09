@@ -47,7 +47,7 @@
 }
 </style>
 
-<form class="form-horizontal" action="{{ url('/account/shops/update') }}" method="POST">
+<form class="form-horizontal" action="{{ route('shops.update', $id) }}" method="POST">
      {{ csrf_field() }}
 <!--    <div class="form-group">
         <label class="col-sm-2 control-label" for="shop-logo">

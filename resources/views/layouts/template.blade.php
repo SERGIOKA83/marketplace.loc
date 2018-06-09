@@ -2,6 +2,7 @@
 <html style="" class=" md_js md_no-touch md_js md_no-touch"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
         <title>Торговая плошадка для ремесленников</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" />
@@ -9,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/frontend.css?2') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.bxslider.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/bxslider.css?v1') }}" />
-
+        @stack('scripts')
 
     </head>
     <body>
@@ -227,7 +228,7 @@
     <!--content here-->
  @section('accountMenu')
 
-    <div class="col-sm-3">
+    <div class="col-xs-12 col-sm-3">
         <!-- sidebar user menu -->
                 <div class="profile-sidebar shadow">
             <div class="profile-userpic">
@@ -321,4 +322,5 @@
 
 
 <div class="scrollwidth"></div>
+
 </body></html>
